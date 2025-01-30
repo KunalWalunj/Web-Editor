@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.js"></script>
+</head>
+<body onload="openEditor('html')">
+    <h1> Web Editor</h1>
+    <div class="tabs">
+        <button class="tab" onclick="openEditor('html')">HTML</button>
+        <button class="tab" onclick="openEditor('css')">CSS</button>
+        <button class="tab" onclick="openEditor('js')">JavaScript</button>
+    </div>
+    
+
+    <div id="htmlEditor" class="editor" style="width: 100%; height: 500px; border: 1px solid #ddd;"></div>
+    <div id="cssEditor" class="editor" style="width: 100%; height: 500px; border: 1px solid #ddd;"></div>
+    <div id="jsEditor" class="editor" style="width: 100%; height: 500px; border: 1px solid #ddd;"></div>
+
+    
+        <div class="center">
+          <button onclick="runCode()">Run Code</button>
+        </div> 
+      
+    <!-- <button onclick="runCode()" style="height:fit-content; width:fit-content; align-content: center;">Run Code</button> -->
+
+    <iframe id="preview" style="width:100%; height:400px; border:1px solid #959393;"></iframe>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+ 
